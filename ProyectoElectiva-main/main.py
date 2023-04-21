@@ -1,16 +1,15 @@
-import datetime
 #Librerías para el asistente
+import datetime
 import speech_recognition as sr
 import pyttsx3
 import wikipedia
 import subprocess as sub
 from deep_translator import GoogleTranslator
 import os
-import time
 import openai
 
 #Conexion con la API de OpenAI
-openai.api_key = "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"
+openai.api_key = "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"
 name = "bolt"
 #Para que el asistente te escuche
 entrada = sr.Recognizer()
@@ -132,7 +131,7 @@ def ejecutarBot():
                 #El prompt es lo que el bot va a decir
                 prompt=conversation,
                 #La temperatura controla la creatividad del bot
-                temperature=0.4,
+                temperature=0.5,
                 #max_tokens es la cantidad de palabras (máxima) que va a decir el bot
                 max_tokens=150,
                 #top_p es la probabilidad de que el bot diga una palabra
@@ -148,7 +147,7 @@ def ejecutarBot():
             conversation += respuesta
         print("Bolt: " + respuesta+"\n")
     
-        
+#Guardar la información que nos da el usuario    
 
 if __name__ == "__main__":
     ejecutarBot()	
