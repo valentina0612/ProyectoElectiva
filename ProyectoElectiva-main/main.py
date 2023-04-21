@@ -9,7 +9,7 @@ import os
 import openai
 
 #Conexion con la API de OpenAI
-openai.api_key = "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"
+openai.api_key = ""
 name = "bolt"
 #Para que el asistente te escuche
 entrada = sr.Recognizer()
